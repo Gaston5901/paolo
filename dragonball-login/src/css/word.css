@@ -1,0 +1,230 @@
+body {
+    background: url('/dragonball-login/img/image\ copy.png') no-repeat center center fixed;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+   
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    /* Tipografía */
+    font-family: 'Saiyan Sans', Impact, 'Arial Black', sans-serif;
+    font-size: 7rem; /* ¡Más grande y poderoso aún! */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    margin: 50px 0;
+
+    /* Color Base */
+    color: #f7c418; /* Un dorado más vivo y brillante */
+    
+    /* El Efecto 3D y el Resplandor, construidos en capas */
+    text-shadow: 
+        /* Contorno exterior negro, grueso y nítido */
+        -5px -5px 0 #000, 
+        5px -5px 0 #000, 
+        -5px 5px 0 #000, 
+        5px 5px 0 #000,
+        
+        /* Contorno interior rojo para simular la energía */
+        -3px -3px 0 #e74c3c, 
+        3px -3px 0 #e74c3c, 
+        -3px 3px 0 #e74c3c, 
+        3px 3px 0 #e74c3c,
+        
+        /* Sombra oscura para dar relieve y 3D */
+        8px 8px 0 #1a1a1a,
+        
+        /* Resplandor dorado de energía Ki */
+        0 0 15px #f7c418,
+        0 0 30px #f7c418;
+
+    /* Animación del pulso de energía (Ki) */
+    animation: brillo-ki 1.8s infinite alternate;
+}
+
+/* Keyframes de la animación (más sutil y fluida) */
+@keyframes brillo-ki {
+    from {
+        text-shadow: 
+            -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000, 5px 5px 0 #000,
+            -3px -3px 0 #e74c3c, 3px -3px 0 #e74c3c, -3px 3px 0 #e74c3c, 3px 3px 0 #e74c3c,
+            8px 8px 0 #1a1a1a,
+            0 0 10px #f7c418;
+    }
+    to {
+        text-shadow: 
+            -6px -6px 0 #000, 6px -6px 0 #000, -6px 6px 0 #000, 6px 6px 0 #000,
+            -4px -4px 0 #e74c3c, 4px -4px 0 #e74c3c, -4px 4px 0 #e74c3c, 4px 4px 0 #e74c3c,
+            10px 10px 0 #1a1a1a,
+            0 0 25px #f7c418,
+            0 0 45px #f7c418,
+            0 0 60px rgba(247, 196, 24, 0.6);
+    }
+}
+.login-container h1 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    color: #f44336;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 0 #ffeb3b, 4px 4px 0 #1976d2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.3rem 0;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.7rem;
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #f44336;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(90deg, #1976d2 60%, #ffeb3b 100%);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(31, 38, 135, 0.15);
+    transition: background 0.2s, color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #f44336 60%, #ffeb3b 100%);
+    color: #222;
+}
+
+p {
+    margin-top: 1.5rem;
+    color: rgb(11, 12, 92);
+}
+
+a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #f44336;
+}
+
+@media (max-width: 500px) {
+    .login-container {
+        padding: 1.5rem 0.5rem;
+        max-width: 95vw;
+    }
+    .login-container h1 {
+        font-size: 1.5rem;
+    }
+}
+/*
+ * Estos son los estilos básicos que hacen que la imagen se adapte
+ * al ancho de su contenedor.
+ */
+/*
+ * Este es el estilo principal. Las imágenes nunca superarán el 100%
+ * del ancho de su contenedor y mantendrán su proporción.
+ */
+img {
+    max-width: 70%;
+    height: auto;
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen */
+}
+
+/*
+ * Usamos una clase para limitar el tamaño de las imágenes en general,
+ * de modo que no ocupen todo el ancho en pantallas grandes.
+ * Aplica esta clase a las imágenes que no quieras que sean enormes.
+ * Ejemplo: <img class="imagen-limitada" src="..."/>
+ */
+.imagen-limitada {
+    max-width: 800px; /* Tamaño máximo para escritorio */
+}
+
+/*
+ * Media Query para ajustar el tamaño de la imagen en pantallas medianas (tabletas).
+ */
+@media screen and (max-width: 991px) {
+    .imagen-limitada {
+        max-width: 100%; /* Permite que la imagen ocupe todo el ancho de la tableta */
+    }
+}
+
+/*
+ * Aquí usamos Media Queries para aplicar diferentes estilos
+ * en diferentes tamaños de pantalla (breakpoints).
+ */
+
+/* Estilos para pantallas grandes (más de 992px, por ejemplo en escritorio) */
+@media screen and (min-width: 992px) {
+    .contenedor-img {
+        /*
+         * Puedes limitar el tamaño máximo de la imagen en pantallas grandes
+         * para que no se vea gigantesca.
+         */
+        max-width: 800px; 
+    }
+}
+
+/* Estilos para tabletas (entre 768px y 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .contenedor-img {
+        /* En tabletas, la imagen puede ocupar un poco más de espacio */
+        max-width: 70%;
+    }
+}
+
+/* Estilos para móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+    .contenedor-img {
+        /*
+         * En móviles, es mejor que la imagen ocupe todo el ancho
+         * para que se vea bien sin tener que hacer zoom.
+         */
+        max-width: 100%;
+    }
+}
+section ul {
+  display: flex;
+  flex-direction: column; /* Esto hace que los elementos se apilen */
+}
+
+section li {
+  display: flex;
+  align-items: center; /* Alinea verticalmente la imagen y el texto */
+  gap: 10px; /* Agrega espacio entre la imagen y el texto */
+}

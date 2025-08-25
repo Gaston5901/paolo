@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rosa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rosa-container" id="rosa-container">
+        <div class="glass">
+            <div class="glass-glow-base"></div>
+            <div class="flower">
+                <div class="petal p1"></div>
+                <div class="petal p2"></div>
+                <div class="petal p3"></div>
+                <div class="petal p4"></div>
+                <div class="petal p5"></div>
+                <div class="petal p6"></div>
+                <div class="petal p7"></div>
+                <div class="petal p8"></div>
+                <div class="stem">
+                    <div class="leaf l1"></div>
+                    <div class="leaf l2"></div>
+                </div>
+            </div>
+            <div class="falling-petal"></div>
+        </div>
+        <div class="go-to-envelope" onclick="showEnvelope()">Toca para ver la carta 📩</div>
+    </div>
+
+    <div class="envelope-container hidden" id="envelope-container" onclick="openEnvelope()">
+        <div class="message-overlay">Toca para abrir</div>
+        <div class="flap"></div>
+        <div class="envelope"></div>
+        <div class="heart-seal"></div>
+    </div>
+
+    <div class="full-screen-letter" id="full-letter">
+        <button class="return-button" onclick="returnToRosa()">Volver a la Rosa</button>
+        <p>
+            Amiga mia <br><br>
+            Si alguna vez necesitas de alguien que te comprenda, que te escuche, que te ayude, en cualquier momento de tu vida... cuentas conmigo. nunca te sientas sola, mi hombro siempre estara para ti cuando lo necesites. <br><br>
+            Atte: Paolo
+            
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
